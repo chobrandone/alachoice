@@ -27,6 +27,8 @@ const schema = z.object({
   // Automation scheduler.
   REMINDERS_ENABLED: z.coerce.boolean().default(true),
   REMINDER_INTERVAL_MS: z.coerce.number().default(60 * 60 * 1000),
+  /** Shared secret for the Vercel Cron reminder endpoint (Bearer token). */
+  CRON_SECRET: z.string().optional(),
 
   PUBLIC_RATE_WINDOW_MS: z.coerce.number().default(15 * 60 * 1000),
   PUBLIC_RATE_MAX: z.coerce.number().default(30),

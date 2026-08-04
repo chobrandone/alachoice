@@ -12,6 +12,7 @@ import {
   clientsAdminRouter,
 } from './admin-portal.routes.js';
 import { leadsAdminRouter, leadTasksAdminRouter } from './admin-leads.routes.js';
+import { cronRouter } from './cron.routes.js';
 import { settingsPublicRouter, settingsAdminRouter } from './settings.routes.js';
 import { mediaRouter } from './media.routes.js';
 import { usersRouter } from './users.routes.js';
@@ -27,6 +28,7 @@ export const apiRouter = Router();
 
 /* ------------------------------- Public -------------------------------- */
 apiRouter.use('/auth', authRouter);
+apiRouter.use('/cron', cronRouter); // Vercel Cron (reminders) — guarded by CRON_SECRET
 apiRouter.use('/settings', settingsPublicRouter);
 apiRouter.use('/events', eventsPublicRouter);
 apiRouter.use('/portal', portalRouter); // client portal: auth + applications + documents
