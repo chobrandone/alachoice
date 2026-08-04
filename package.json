@@ -1,0 +1,19 @@
+{
+  "name": "ala-website",
+  "private": true,
+  "version": "0.1.0",
+  "description": "American Liaison in Africa — CMS-driven website",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm --workspace @ala/backend run dev",
+    "dev:frontend": "npm --workspace @ala/frontend run dev",
+    "build": "npm --workspace @ala/types run build && npm --workspace @ala/backend run build && npm --workspace @ala/frontend run build",
+    "typecheck": "npm --workspaces --if-present run typecheck"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ala-navy: #0a2647;
+    --ala-navy-deep: #061a33;
+    --ala-navy-soft: #14477a;
+    --ala-red: #c8102e;
+    --ala-red-dark: #9b0c23;
+    --ala-gold: #c9a227;
+    --ala-grey-50: #f4f6f9;
+    --ala-grey-200: #e2e8f0;
+    --ala-grey-500: #64748b;
+    --ala-ink: #0f172a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-body text-ala-ink antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-ala-navy;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: var(--ala-navy);
+    color: #fff;
+  }
+
+  /* Visible keyboard focus everywhere (WCAG 2.4.7) */
+  :focus-visible {
+    outline: 2px solid var(--ala-red);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-heading text-eyebrow font-semibold uppercase text-ala-red;
+  }
+
+  /* Navy gradient used on hero and dark sections */
+  .bg-navy-gradient {
+    background: linear-gradient(135deg, var(--ala-navy-deep) 0%, var(--ala-navy) 100%);
+  }
+
+  /* Rich-text (TipTap/CMS body) rendering */
+  .prose-ala {
+    @apply text-ala-ink;
+  }
+  .prose-ala h2 { @apply text-h3 mt-10 mb-4; }
+  .prose-ala h3 { @apply text-xl font-semibold mt-8 mb-3; }
+  .prose-ala p { @apply mb-4; }
+  .prose-ala ul { @apply mb-4 list-disc pl-6 space-y-2; }
+  .prose-ala ol { @apply mb-4 list-decimal pl-6 space-y-2; }
+  .prose-ala a { @apply text-ala-red underline underline-offset-2; }
+}

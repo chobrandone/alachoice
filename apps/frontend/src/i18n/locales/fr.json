@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "ata": "ATA",
+    "events": "Événements",
+    "countries": "Pays",
+    "news": "Actualités",
+    "gallery": "Galerie",
+    "testimonials": "Témoignages",
+    "portal": "Espace client",
+    "contact": "Contactez-nous",
+    "getQuote": "Demander un devis",
+    "knowMore": "En savoir plus"
+  },
+  "common": {
+    "readMore": "Lire la suite",
+    "learnMore": "En savoir plus",
+    "register": "S'inscrire",
+    "viewAll": "Voir tout",
+    "loading": "Chargement…",
+    "submit": "Envoyer",
+    "sending": "Envoi…",
+    "backHome": "Retour à l'accueil",
+    "upcoming": "À venir",
+    "past": "Passés",
+    "menu": "Menu",
+    "close": "Fermer",
+    "language": "Langue"
+  },
+  "footer": {
+    "quickLinks": "Liens rapides",
+    "consultingServices": "Services de conseil",
+    "headOffice": "Siège social",
+    "hours": "Lun–Ven 08:00–22:00",
+    "rights": "Tous droits réservés."
+  },
+  "forms": {
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "phone": "Numéro de téléphone",
+    "country": "Pays",
+    "service": "Service",
+    "selectService": "Choisir un service",
+    "message": "Message",
+    "budget": "Budget estimé",
+    "details": "Détails du projet",
+    "subscribe": "S'abonner",
+    "newsletterPlaceholder": "Votre adresse e-mail",
+    "successInquiry": "Merci — nous vous contacterons sous peu.",
+    "successNewsletter": "Vous êtes abonné(e).",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "required": "Ce champ est obligatoire",
+    "invalidEmail": "Saisissez une adresse e-mail valide"
+  },
+  "home": {
+    "faqTitle": "Questions fréquentes",
+    "inquiryTitle": "Envoyez-nous une demande"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "body": "La page que vous recherchez n'existe pas ou a été déplacée."
+  }
+}

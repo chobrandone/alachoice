@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "ata": "ATA",
+    "events": "Events",
+    "countries": "Countries",
+    "news": "News",
+    "gallery": "Gallery",
+    "testimonials": "Testimonials",
+    "portal": "Client Login",
+    "contact": "Contact Us",
+    "getQuote": "Get a Quote",
+    "knowMore": "Know More"
+  },
+  "common": {
+    "readMore": "Read more",
+    "learnMore": "Learn more",
+    "register": "Register",
+    "viewAll": "View all",
+    "loading": "Loading…",
+    "submit": "Submit",
+    "sending": "Sending…",
+    "backHome": "Back to home",
+    "upcoming": "Upcoming",
+    "past": "Past",
+    "menu": "Menu",
+    "close": "Close",
+    "language": "Language"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "consultingServices": "Consulting Services",
+    "headOffice": "Head Office",
+    "hours": "Mon–Fri 08:00–22:00",
+    "rights": "All rights reserved."
+  },
+  "forms": {
+    "name": "Full name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "country": "Country",
+    "service": "Service",
+    "selectService": "Select a service",
+    "message": "Message",
+    "budget": "Budget range",
+    "details": "Project details",
+    "subscribe": "Subscribe",
+    "newsletterPlaceholder": "Your email address",
+    "successInquiry": "Thank you — we'll be in touch shortly.",
+    "successNewsletter": "You're subscribed.",
+    "error": "Something went wrong. Please try again.",
+    "required": "This field is required",
+    "invalidEmail": "Enter a valid email address"
+  },
+  "home": {
+    "faqTitle": "Frequently Asked Questions",
+    "inquiryTitle": "Send us an inquiry"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist or has moved."
+  }
+}
