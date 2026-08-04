@@ -1,0 +1,45 @@
+# Render Blueprint — ALA backend API (Express, persistent Node service).
+# Deploy: Render Dashboard → New → Blueprint → pick this repo. Then set the
+# `sync: false` env vars (secrets) in the Render UI.
+#
+# The persistent process runs backend/src/index.ts (compiled), so the in-process
+# hourly reminder scheduler works — no external cron needed (except on the free
+# plan, which spins the service down when idle).
+services:
+  - type: web
+    name: alachoice-api
+    runtime: node
+    plan: free
+    rootDir: .
+    buildCommand: npm install && npm run build --workspace @ala/types && npm run build --workspace @ala/backend
+    startCommand: npm run start --workspace @ala/backend
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Secrets — set these in the Render dashboard (not committed):
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      # Your Vercel frontend origin, e.g. https://alachoice.vercel.app
+      - key: CORS_ORIGINS
+        sync: false
+      - key: SITE_URL
+        sync: false
+      # Optional — email (SMTP) + WhatsApp Cloud API:
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: WHATSAPP_TOKEN
+        sync: false
+      - key: WHATSAPP_PHONE_ID
+        sync: false
