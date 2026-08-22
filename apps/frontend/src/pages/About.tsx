@@ -8,7 +8,7 @@ import { TeamCard } from '@/components/content/TeamCard';
 import { useTeam, useTimeline, useStatistics, usePage, useSiteSettings, usePartners } from '@/lib/queries';
 import { useLocalized } from '@/lib/i18nField';
 
-const MEDIA = 'https://bihhaxezlkgusionmlwm.supabase.co/storage/v1/object/public/media/alachoice/2025/04';
+const MEDIA = 'https://alachoice.com/wp-content/uploads/2025/04';
 
 export default function About() {
   const localized = useLocalized();

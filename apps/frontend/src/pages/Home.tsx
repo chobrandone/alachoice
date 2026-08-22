@@ -10,9 +10,6 @@ import { Accordion } from '@/components/ui/Accordion';
 import { Skeleton } from '@/components/ui/Skeleton';
 import { Hero } from '@/components/content/Hero';
 import { ServiceCard } from '@/components/content/ServiceCard';
-import { EventCard } from '@/components/content/EventCard';
-import { PartnerMarquee } from '@/components/content/PartnerMarquee';
-import { NewsTicker } from '@/components/content/NewsTicker';
 import { NewsCard } from '@/components/content/NewsCard';
 import { TestimonialCard } from '@/components/content/TestimonialCard';
 import { InquiryForm } from '@/components/forms/InquiryForm';
@@ -21,14 +18,13 @@ import {
   useStatistics,
   useMethodology,
   useFaqs,
-  useFeaturedEvent,
   useTestimonials,
   useNews,
   useSiteSettings,
 } from '@/lib/queries';
 import { useLocalized } from '@/lib/i18nField';
 
-const MEDIA = 'https://bihhaxezlkgusionmlwm.supabase.co/storage/v1/object/public/media/alachoice/2025/04';
+const MEDIA = 'https://alachoice.com/wp-content/uploads/2025/04';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -37,7 +33,6 @@ export default function Home() {
   const { data: stats } = useStatistics();
   const { data: pillars } = useMethodology();
   const { data: faqs } = useFaqs();
-  const { data: featured } = useFeaturedEvent();
   const { data: testimonials } = useTestimonials();
   const { data: news } = useNews();
   const { data: settings } = useSiteSettings();
@@ -56,7 +51,6 @@ export default function Home() {
     <>
       <Seo jsonLd={orgJsonLd} />
       <Hero />
-      <NewsTicker />
 
       {/* About teaser — 7/5 split */}
       <Section>
@@ -77,14 +71,16 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal className="lg:col-span-7" delay={0.1}>
-            <Eyebrow>About ALA</Eyebrow>
+            <Eyebrow>About Us</Eyebrow>
             <h2 className="text-h2">
-              A trusted bridge between Africa and the United States
+              We are business consultants dedicated to driving your success
             </h2>
             <p className="mt-5 text-body text-ala-grey-500">
-              American Liaison in Africa partners with businesses, investors, and institutions to
-              navigate cross-border opportunity — combining local insight in Cameroon and the wider
-              continent with deep access to U.S. markets.
+              At American Liaison in Africa (ALA), our mission is simple yet powerful: to bridge the
+              gap between Cameroon and the United States through strategic consulting, cross-border
+              collaboration, and impactful development initiatives. We are your trusted partner in
+              navigating international opportunities with confidence, clarity, and cultural
+              intelligence.
             </p>
             <ul className="mt-6 space-y-3">
               {['Business development', 'Investment advisory', 'International trade'].map((item) => (
@@ -106,8 +102,8 @@ export default function Home() {
         <Container>
           <SectionHeading
             align="center"
-            eyebrow="What we do"
-            title="Consulting services built for cross-Atlantic growth"
+            eyebrow="Consulting Solutions"
+            title="We've got your business covered"
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {servicesLoading
@@ -127,10 +123,12 @@ export default function Home() {
       <Section tone="navy">
         <Container className="grid gap-12 lg:grid-cols-2">
           <div>
-            <Eyebrow className="text-ala-gold">Our approach</Eyebrow>
+            <Eyebrow className="text-ala-gold">Our methodology for delivering solutions</Eyebrow>
             <h2 className="text-h2 text-white">Strategic Excellence, Proven Results</h2>
             <p className="mt-5 text-white/75">
-              A disciplined methodology that turns cross-border complexity into sustainable outcomes.
+              At American Liaison in Africa, we blend strategic insight with local expertise to
+              deliver tailored, sustainable outcomes — through deep stakeholder engagement,
+              data-driven planning, and agile implementation aligned with your goals.
             </p>
           </div>
           <div className="space-y-8">
@@ -174,9 +172,15 @@ export default function Home() {
       {/* CTA band */}
       <Section className="bg-navy-gradient py-20 text-white">
         <Container className="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
-          <div>
-            <h2 className="text-h2 text-white">Let's Build Together.</h2>
-            <p className="mt-2 text-white/80">Schedule a free consultation today.</p>
+          <div className="max-w-2xl">
+            <h2 className="text-h2 text-white">
+              Let's Build Together. Schedule a free consultation today
+            </h2>
+            <p className="mt-3 text-white/80">
+              Whether you're a U.S. company exploring African markets or a Cameroonian entrepreneur
+              seeking American partnerships — ALA is your gateway to growth, influence, and
+              opportunity.
+            </p>
           </div>
           <Button asChild size="lg">
             <Link to="/contact">Get a Quotation</Link>
@@ -184,35 +188,13 @@ export default function Home() {
         </Container>
       </Section>
 
-      {/* Partner marquee */}
-      <Section className="py-14">
-        <Container>
-          <p className="mb-8 text-center text-sm font-medium uppercase tracking-wider text-ala-grey-500">
-            Trusted by partners across two continents
-          </p>
-          <PartnerMarquee />
-        </Container>
-      </Section>
-
-      {/* Featured event */}
-      {featured && (
-        <Section tone="grey">
-          <Container>
-            <SectionHeading eyebrow="Next event" title={localized(featured, 'title')} />
-            <div className="mt-8 max-w-md">
-              <EventCard event={featured} />
-            </div>
-          </Container>
-        </Section>
-      )}
-
       {/* Testimonials */}
       {testimonials && testimonials.length > 0 && (
         <Section tone="grey">
           <Container>
             <SectionHeading
               align="center"
-              eyebrow="Testimonials"
+              eyebrow="They Trust Us"
               title="Trusted by clients across two continents"
             />
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -236,7 +218,7 @@ export default function Home() {
         <Section>
           <Container>
             <div className="flex items-end justify-between gap-4">
-              <SectionHeading eyebrow="News & Updates" title="Latest opportunities & insights" />
+              <SectionHeading eyebrow="Our Knowledge" title="Stay updated with our consulting services" />
               <Link to="/news" className="hidden shrink-0 text-sm font-semibold text-ala-red hover:underline sm:block">
                 View all news →
               </Link>

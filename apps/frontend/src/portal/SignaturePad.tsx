@@ -25,7 +25,7 @@ export const SignaturePad = forwardRef<SignaturePadHandle>((_props, ref) => {
     ctx.scale(ratio, ratio);
     ctx.lineWidth = 2;
     ctx.lineCap = 'round';
-    ctx.strokeStyle = '#0A2647';
+    ctx.strokeStyle = '#054A91';
   }, []);
 
   const pos = (e: React.PointerEvent) => {

@@ -10,7 +10,7 @@ export interface Datum {
 }
 
 export const CHART_COLORS = [
-  '#0A2647', // navy
+  '#054A91', // navy
   '#C8102E', // red
   '#C9A227', // gold
   '#2C74B3', // blue
@@ -76,7 +76,7 @@ export function Donut({ data, size = 160 }: { data: Datum[]; size?: number }) {
           offset += dash;
           return seg;
         })}
-        <text x={r} y={r} textAnchor="middle" dominantBaseline="central" className="rotate-90" style={{ transformOrigin: 'center' }} fontSize={size * 0.2} fontWeight="700" fill="#0A2647">
+        <text x={r} y={r} textAnchor="middle" dominantBaseline="central" className="rotate-90" style={{ transformOrigin: 'center' }} fontSize={size * 0.2} fontWeight="700" fill="#054A91">
           {total}
         </text>
       </svg>

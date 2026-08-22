@@ -11,9 +11,9 @@ export default {
     extend: {
       colors: {
         ala: {
-          navy: '#0A2647',
-          'navy-deep': '#061A33',
-          'navy-soft': '#14477A',
+          navy: '#054A91',
+          'navy-deep': '#043568',
+          'navy-soft': '#1E6BB8',
           red: '#C8102E',
           'red-dark': '#9B0C23',
           gold: '#C9A227',
@@ -41,8 +41,8 @@ export default {
         input: '4px',
       },
       boxShadow: {
-        soft: '0 4px 24px rgba(10,38,71,0.08)',
-        'soft-lg': '0 12px 40px rgba(10,38,71,0.12)',
+        soft: '0 4px 24px rgba(5,74,145,0.08)',
+        'soft-lg': '0 12px 40px rgba(5,74,145,0.12)',
       },
       maxWidth: { container: '1280px' },
       spacing: {
