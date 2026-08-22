@@ -14,6 +14,6 @@
     "typecheck": "npm --workspaces --if-present run typecheck"
   },
   "engines": {
-    "node": ">=20"
+    "node": "20.x"
   }
 }
