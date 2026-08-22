@@ -13,6 +13,10 @@
     "build": "npm --workspace @ala/types run build && npm --workspace @ala/backend run build && npm --workspace @ala/frontend run build",
     "typecheck": "npm --workspaces --if-present run typecheck"
   },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.6"
+  },
   "engines": {
     "node": "20.x"
   },
