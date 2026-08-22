@@ -25,6 +25,3 @@ Thumbs.db
 
 # Test / coverage
 coverage/
-
-# Cross-platform native deps (rollup): let Vercel resolve on Linux
-package-lock.json
