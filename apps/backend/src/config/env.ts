@@ -37,10 +37,11 @@ const schema = z.object({
 const parsed = schema.safeParse(process.env);
 
 if (!parsed.success) {
-  // Fail fast with a readable message rather than obscure runtime errors later.
-  console.error('❌ Invalid environment configuration:');
-  console.error(parsed.error.flatten().fieldErrors);
-  process.exit(1);
+  // Fail fast with a readable message. Throw (not process.exit) so serverless
+  // hosts can surface it as a proper 500 instead of an opaque crash.
+  const fields = parsed.error.flatten().fieldErrors;
+  console.error('❌ Invalid environment configuration:', fields);
+  throw new Error('Invalid environment configuration: ' + JSON.stringify(fields));
 }
 
 export const env = parsed.data;
