@@ -10,6 +10,7 @@ import { Socials } from './Socials';
 import { useServices, useSiteSettings } from '@/lib/queries';
 import { useLocalized } from '@/lib/i18nField';
 import { cn } from '@/lib/cn';
+import alaLogo from '@/assets/ala-Logo.jpg';
 
 export function Header() {
   const { t } = useTranslation();
@@ -75,10 +76,12 @@ export function Header() {
 
       {/* Main bar */}
       <Container className="flex h-16 items-center justify-between gap-6 md:h-20">
-        <Link to="/" className="flex items-center gap-2 text-white" aria-label="ALA home">
-          <span className="font-heading text-lg font-bold tracking-tight">
-            ALA<span className="text-ala-red">.</span>
-          </span>
+        <Link to="/" className="flex items-center" aria-label="American Liaison in Africa — home">
+          <img
+            src={alaLogo}
+            alt="American Liaison in Africa"
+            className="h-11 w-auto rounded-md bg-white p-1.5 md:h-14"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
@@ -160,9 +163,11 @@ function MobileNav({
         <Dialog.Overlay className="fixed inset-0 z-50 bg-black/40" />
         <Dialog.Content className="fixed inset-0 z-50 flex flex-col bg-ala-navy p-6 text-white">
           <div className="flex items-center justify-between">
-            <span className="font-heading text-lg font-bold">
-              ALA<span className="text-ala-red">.</span>
-            </span>
+            <img
+              src={alaLogo}
+              alt="American Liaison in Africa"
+              className="h-11 w-auto rounded-md bg-white p-1.5"
+            />
             <Dialog.Close aria-label={t('common.close')}>
               <X className="h-6 w-6" />
             </Dialog.Close>
