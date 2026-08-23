@@ -23,8 +23,7 @@ import {
   useSiteSettings,
 } from '@/lib/queries';
 import { useLocalized } from '@/lib/i18nField';
-
-const MEDIA = 'https://alachoice.com/wp-content/uploads/2025/04';
+import aboutAfrica from '@/assets/about-africa.jpg';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -37,7 +36,7 @@ export default function Home() {
   const { data: news } = useNews();
   const { data: settings } = useSiteSettings();
   const aboutImage =
-    ((settings?.images as Record<string, string> | undefined)?.home_about_image) || `${MEDIA}/Africa.jpg`;
+    ((settings?.images as Record<string, string> | undefined)?.home_about_image) || aboutAfrica;
 
   const orgJsonLd = {
     '@context': 'https://schema.org',

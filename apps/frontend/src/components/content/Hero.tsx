@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/primitives';
 import { Button } from '@/components/ui/Button';
 import { useHeroSlides } from '@/lib/queries';
 import { useLocalized } from '@/lib/i18nField';
+import heroBridge from '@/assets/hero-bridge.jpg';
 
 export function Hero() {
   const localized = useLocalized();
@@ -27,17 +28,15 @@ export function Hero() {
     <section className="relative flex min-h-[92vh] items-center overflow-hidden bg-navy-gradient text-white">
       {/* Background image with 60% navy overlay for AA contrast */}
       <AnimatePresence mode="wait">
-        {slide?.image_url && (
-          <motion.div
-            key={slide.id}
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${slide.image_url})` }}
-            initial={{ opacity: 0, scale: 1.04 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-          />
-        )}
+        <motion.div
+          key={slide?.id ?? 'default'}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${slide?.image_url || heroBridge})` }}
+          initial={{ opacity: 0, scale: 1.04 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+        />
       </AnimatePresence>
       <div className="absolute inset-0 bg-ala-navy/60" aria-hidden />
       <div

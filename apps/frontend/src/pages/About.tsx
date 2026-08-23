@@ -7,8 +7,8 @@ import { Skeleton } from '@/components/ui/Skeleton';
 import { TeamCard } from '@/components/content/TeamCard';
 import { useTeam, useTimeline, useStatistics, usePage, useSiteSettings, usePartners } from '@/lib/queries';
 import { useLocalized } from '@/lib/i18nField';
-
-const MEDIA = 'https://alachoice.com/wp-content/uploads/2025/04';
+import aboutAfrica from '@/assets/about-africa.jpg';
+import usAfrica from '@/assets/us-africa.webp';
 
 export default function About() {
   const localized = useLocalized();
@@ -19,7 +19,7 @@ export default function About() {
   const { data: settings } = useSiteSettings();
   const { data: partners } = usePartners();
   const whoImage =
-    ((settings?.images as Record<string, string> | undefined)?.about_who_image) || `${MEDIA}/US-AFRICA.webp`;
+    ((settings?.images as Record<string, string> | undefined)?.about_who_image) || usAfrica;
 
   return (
     <>
@@ -28,7 +28,7 @@ export default function About() {
         eyebrow="About Us"
         title={localized(page, 'title') || 'Bridging two continents with integrity'}
         intro={localized(page, 'seo_description') || undefined}
-        image={page?.hero_image_url}
+        image={page?.hero_image_url || aboutAfrica}
       />
 
       {/* Mission / vision */}
