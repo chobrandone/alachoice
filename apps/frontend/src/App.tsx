@@ -8,6 +8,7 @@ const About = lazy(() => import('@/pages/About'));
 const Services = lazy(() => import('@/pages/Services'));
 const ServiceDetail = lazy(() => import('@/pages/ServiceDetail'));
 const Ata = lazy(() => import('@/pages/Ata'));
+const B2BPlatform = lazy(() => import('@/pages/B2BPlatform'));
 const Events = lazy(() => import('@/pages/Events'));
 const EventDetail = lazy(() => import('@/pages/EventDetail'));
 const Gallery = lazy(() => import('@/pages/Gallery'));
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="services" element={<Services />} />
           <Route path="services/:slug" element={<ServiceDetail />} />
           <Route path="ata" element={<Ata />} />
+          <Route path="b2b-platform" element={<B2BPlatform />} />
           <Route path="events" element={<Events />} />
           <Route path="events/:slug" element={<EventDetail />} />
           <Route path="gallery" element={<Gallery />} />

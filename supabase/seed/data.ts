@@ -62,7 +62,7 @@ export const siteSettings: { key: string; value_json: Record<string, unknown> }[
     value_json: {
       default_title: 'American Liaison in Africa',
       default_description:
-        'Corporate mobility, international trade, AI business automation, and corporate training bridging Cameroon, Africa, and the United States.',
+        'International trade and export advisory, market entry, business matchmaking, visa and global mobility, investment facilitation, and trade training — bridging Africa and the United States.',
     },
   },
 ];
@@ -87,81 +87,161 @@ export const heroSlides = [
   },
 ];
 
-// The four ALA pillars. Each pillar is one service with an icon, cover image,
-// and a rich body whose <h3> sections group its sub-services. Cover images are
-// royalty-free Unsplash photos chosen to reflect each pillar; swap any of them
-// in the admin Services module. Verified to load during bring-up.
+// The six ALA service pillars (from the Service Catalogue). Each pillar is one
+// service with an icon, cover image (from alachoice.com media), and a rich body
+// whose <section class="svc-group"> blocks render the "What ALA delivers"
+// sub-services as clean cards. Edit any of this in the admin Services module.
 export const services = [
   {
-    slug: 'ala-mobility',
-    icon_name: 'plane',
-    title_en: 'ALA Mobility',
-    title_fr: 'ALA Mobility',
-    cover_image_url: media('2025/04/visa-assistance-service.jpg'),
+    slug: 'international-trade-export-advisory',
+    icon_name: 'ship',
+    title_en: 'International Trade & Export Advisory',
+    title_fr: 'Commerce international et conseil à l’export',
+    cover_image_url: media('2025/04/ImportExport2.jpeg'),
     excerpt_en:
-      'Corporate travel and international mobility — from business visas and invitation letters to executive travel, relocation, and airport meet-and-greet.',
+      'Export readiness, import/export support, trade compliance and international market access — helping African companies reach buyers abroad, especially in the United States.',
     excerpt_fr:
-      'Voyages d’affaires et mobilité internationale — des visas d’affaires et lettres d’invitation à la coordination des voyages, la relocation et l’accueil à l’aéroport.',
+      'Préparation à l’export, accompagnement import/export, conformité commerciale et accès aux marchés internationaux — pour aider les entreprises africaines à atteindre des acheteurs à l’étranger, en particulier aux États-Unis.',
     body_en:
-      '<p>ALA Mobility delivers corporate travel and international mobility solutions that move executives, teams, and families across borders with confidence — handling the visas, logistics, and on-the-ground support so you can focus on the purpose of the trip.</p><h3>Our services</h3><ul><li>Business visa assistance</li><li>Executive travel coordination</li><li>Invitation letters</li><li>Visa interview preparation</li><li>Passport assistance</li><li>Travel insurance</li><li>Business travel planning</li><li>Work permit guidance (through partners)</li><li>Expat relocation support</li><li>Airport meet-and-greet services</li></ul>',
+      '<p>We help African companies get export-ready and reach international buyers — handling the preparation, documentation, compliance and connections that cross-border trade requires, with a particular focus on the United States.</p>' +
+      '<section class="svc-group"><h3>Export readiness</h3><p>Assessing and preparing a company’s products, capacity and documentation so that it is ready to sell in international markets.</p></section>' +
+      '<section class="svc-group"><h3>Import/export support</h3><p>Practical support with the steps and documents involved in importing and exporting goods.</p></section>' +
+      '<section class="svc-group"><h3>Trade compliance coordination</h3><p>Coordinating the standards, registrations, labelling and certifications that target markets require.</p></section>' +
+      '<section class="svc-group"><h3>International market access</h3><p>Helping companies reach buyers and markets abroad, particularly in the United States.</p></section>',
     body_fr:
-      '<p>ALA Mobility propose des solutions de voyages d’affaires et de mobilité internationale pour déplacer dirigeants, équipes et familles au-delà des frontières en toute sérénité — en prenant en charge les visas, la logistique et l’accompagnement sur le terrain afin que vous puissiez vous concentrer sur l’objet de votre voyage.</p><h3>Nos services</h3><ul><li>Assistance pour les visas d’affaires</li><li>Coordination des voyages des dirigeants</li><li>Lettres d’invitation</li><li>Préparation à l’entretien de visa</li><li>Assistance passeport</li><li>Assurance voyage</li><li>Organisation des voyages d’affaires</li><li>Accompagnement pour les permis de travail (via partenaires)</li><li>Accompagnement à la relocation des expatriés</li><li>Services d’accueil à l’aéroport</li></ul>',
+      '<p>Nous aidons les entreprises africaines à se préparer à l’export et à atteindre des acheteurs internationaux — en prenant en charge la préparation, la documentation, la conformité et les mises en relation qu’exige le commerce transfrontalier, avec un accent particulier sur les États-Unis.</p>' +
+      '<section class="svc-group"><h3>Préparation à l’export</h3><p>Évaluer et préparer les produits, la capacité et la documentation d’une entreprise afin qu’elle soit prête à vendre sur les marchés internationaux.</p></section>' +
+      '<section class="svc-group"><h3>Accompagnement import/export</h3><p>Un appui concret sur les étapes et les documents liés à l’importation et à l’exportation de marchandises.</p></section>' +
+      '<section class="svc-group"><h3>Coordination de la conformité commerciale</h3><p>Coordonner les normes, enregistrements, étiquetages et certifications exigés par les marchés cibles.</p></section>' +
+      '<section class="svc-group"><h3>Accès aux marchés internationaux</h3><p>Aider les entreprises à atteindre des acheteurs et des marchés à l’étranger, en particulier aux États-Unis.</p></section>',
     sort_order: 0,
     is_published: true,
   },
   {
-    slug: 'ala-trade',
-    icon_name: 'ship',
-    title_en: 'ALA Trade',
-    title_fr: 'ALA Trade',
-    cover_image_url: media('2025/04/ImportExport2.jpeg'),
+    slug: 'market-entry-business-expansion',
+    icon_name: 'target',
+    title_en: 'Market Entry & Business Expansion',
+    title_fr: 'Entrée sur le marché et expansion',
+    cover_image_url: media(
+      '2025/04/business-team-consultant-working-with-new-startup-growth-project-plan-and-discussion-analyzing-for.jpg',
+    ),
     excerpt_en:
-      'International trade, import and export solutions — export readiness, sourcing, compliance, logistics, B2B matchmaking, and trade intelligence.',
+      'Market research, business establishment coordination, expansion strategies and local representation to help you enter a new market or grow in an existing one.',
     excerpt_fr:
-      'Commerce international, import et export — préparation à l’export, sourcing, conformité, logistique, mise en relation B2B et intelligence commerciale.',
+      'Études de marché, coordination de la création d’entreprise, stratégies d’expansion et représentation locale pour entrer sur un nouveau marché ou se développer sur un marché existant.',
     body_en:
-      '<p>ALA Trade helps African and American businesses move products across borders with confidence — from getting export-ready and sourcing the right suppliers to compliance, logistics, matchmaking, and the market intelligence behind every decision.</p><section class="svc-group"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Export services" /><h3>Export services</h3><ul><li>Export Readiness Training (Africa Trade Accelerator)</li><li>Export documentation support</li><li>Product compliance and certification guidance</li><li>FDA, USDA, EU and other market requirements</li><li>Packaging and labeling advisory</li><li>Export pricing strategy</li><li>Buyer matchmaking</li><li>International trade missions</li><li>Market research</li><li>Export financing support</li><li>Freight and logistics coordination</li><li>Quality inspections (through partners)</li></ul></section><section class="svc-group"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Import services" /><h3>Import services</h3><ul><li>International product sourcing</li><li>Supplier identification and verification</li><li>Factory audits (through partners)</li><li>Procurement management</li><li>Price negotiation support</li><li>Shipping and freight coordination</li><li>Customs documentation guidance</li><li>Import compliance advisory</li><li>Supply chain management</li><li>Warehousing and distribution partner referrals</li></ul></section><section class="svc-group"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="B2B trade services" /><h3>B2B trade services</h3><ul><li>Buyer and supplier matchmaking</li><li>Trade representation</li><li>International business development</li><li>B2B meetings</li><li>Trade fairs and exhibition support</li><li>Commercial due diligence</li><li>Contract negotiation support</li><li>Trade missions</li><li>International partnerships</li><li>Government and institutional liaison</li></ul></section><section class="svc-group"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Trade intelligence" /><h3>Trade intelligence</h3><ul><li>Market entry strategies</li><li>Country risk analysis</li><li>Industry reports</li><li>Trade regulations updates</li><li>Tariff and customs advisory</li><li>Incoterms guidance</li><li>Cross-border trade advisory</li></ul></section>',
+      '<p>From first research to on-the-ground representation, we help you understand a market, set up for it, and grow — turning cross-border complexity into a clear, practical plan.</p>' +
+      '<section class="svc-group"><h3>Market research</h3><p>Researching target markets, demand, competition and the regulatory environment for a client’s project.</p></section>' +
+      '<section class="svc-group"><h3>Business establishment coordination</h3><p>Coordinating the steps to set up a business, working with partner firms on legal and tax matters.</p></section>' +
+      '<section class="svc-group"><h3>Expansion strategies</h3><p>Developing practical strategies for entering a new market or growing in an existing one.</p></section>' +
+      '<section class="svc-group"><h3>Local representation</h3><p>Acting as the client’s local point of contact and representative on the ground.</p></section>',
     body_fr:
-      '<p>ALA Trade aide les entreprises africaines et américaines à faire circuler leurs produits au-delà des frontières en toute confiance — de la préparation à l’export et du sourcing des bons fournisseurs à la conformité, la logistique, la mise en relation et l’intelligence de marché qui sous-tend chaque décision.</p><section class="svc-group"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Services d’export" /><h3>Services d’export</h3><ul><li>Formation à la préparation à l’export (Africa Trade Accelerator)</li><li>Accompagnement à la documentation d’export</li><li>Conformité produit et certifications</li><li>Exigences des marchés FDA, USDA, UE et autres</li><li>Conseil en emballage et étiquetage</li><li>Stratégie de prix à l’export</li><li>Mise en relation avec les acheteurs</li><li>Missions commerciales internationales</li><li>Études de marché</li><li>Accompagnement au financement à l’export</li><li>Coordination du fret et de la logistique</li><li>Inspections qualité (via partenaires)</li></ul></section><section class="svc-group"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Services d’import" /><h3>Services d’import</h3><ul><li>Sourcing de produits à l’international</li><li>Identification et vérification des fournisseurs</li><li>Audits d’usine (via partenaires)</li><li>Gestion des achats</li><li>Accompagnement à la négociation des prix</li><li>Coordination de l’expédition et du fret</li><li>Accompagnement à la documentation douanière</li><li>Conseil en conformité import</li><li>Gestion de la chaîne d’approvisionnement</li><li>Mise en relation avec partenaires d’entreposage et de distribution</li></ul></section><section class="svc-group"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Services commerciaux B2B" /><h3>Services commerciaux B2B</h3><ul><li>Mise en relation acheteurs et fournisseurs</li><li>Représentation commerciale</li><li>Développement commercial international</li><li>Rendez-vous B2B</li><li>Accompagnement aux salons et expositions</li><li>Due diligence commerciale</li><li>Accompagnement à la négociation de contrats</li><li>Missions commerciales</li><li>Partenariats internationaux</li><li>Liaison avec les institutions et les pouvoirs publics</li></ul></section><section class="svc-group"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Intelligence commerciale" /><h3>Intelligence commerciale</h3><ul><li>Stratégies d’entrée sur le marché</li><li>Analyse du risque pays</li><li>Rapports sectoriels</li><li>Mises à jour des réglementations commerciales</li><li>Conseil tarifaire et douanier</li><li>Conseil sur les Incoterms</li><li>Conseil en commerce transfrontalier</li></ul></section>',
+      '<p>De la première étude de marché à la représentation sur le terrain, nous vous aidons à comprendre un marché, à vous y implanter et à vous développer — en transformant la complexité transfrontalière en un plan clair et concret.</p>' +
+      '<section class="svc-group"><h3>Études de marché</h3><p>Étudier les marchés cibles, la demande, la concurrence et l’environnement réglementaire du projet d’un client.</p></section>' +
+      '<section class="svc-group"><h3>Coordination de la création d’entreprise</h3><p>Coordonner les étapes de création d’une entreprise, en collaboration avec des cabinets partenaires pour les questions juridiques et fiscales.</p></section>' +
+      '<section class="svc-group"><h3>Stratégies d’expansion</h3><p>Élaborer des stratégies concrètes pour entrer sur un nouveau marché ou se développer sur un marché existant.</p></section>' +
+      '<section class="svc-group"><h3>Représentation locale</h3><p>Agir comme point de contact local et représentant du client sur le terrain.</p></section>',
     sort_order: 1,
     is_published: true,
   },
   {
-    slug: 'ala-ai',
-    icon_name: 'bot',
-    title_en: 'ALA AI',
-    title_fr: 'ALA AI',
-    cover_image_url: media(
-      '2025/04/group-of-business-consultant-working-management-big-data-and-analyze-financial-document-of-company.jpg',
-    ),
+    slug: 'business-matchmaking-partnerships',
+    icon_name: 'handshake',
+    title_en: 'Business Matchmaking & Strategic Partnerships',
+    title_fr: 'Mise en relation et partenariats stratégiques',
+    cover_image_url: media('2025/04/consultant-greeting-international-client-with-handshake-after-partnership.jpg'),
     excerpt_en:
-      'AI employees and business automation — deploy AI assistants across sales, service, HR, legal, and marketing, plus CRM and process automation.',
+      'Buyer-supplier connections, distributor identification, B2B introductions and partnership development — the right people, in the right market, at the right time.',
     excerpt_fr:
-      'Employés IA et automatisation des affaires — déployez des assistants IA pour la vente, le service, les RH, le juridique et le marketing, avec automatisation du CRM et des processus.',
+      'Mise en relation acheteurs-fournisseurs, identification de distributeurs, introductions B2B et développement de partenariats — les bonnes personnes, sur le bon marché, au bon moment.',
     body_en:
-      '<p>ALA AI puts a team of AI employees to work in your business — always on, always consistent — automating sales, customer service, HR, and back-office work so your people can focus on what matters most.</p><h3>Our services</h3><ul><li>AI Executive Assistant</li><li>AI Sales Representative</li><li>AI Customer Service</li><li>AI WhatsApp Assistant</li><li>AI HR Assistant</li><li>AI Legal Assistant</li><li>AI Marketing Assistant</li><li>CRM automation</li><li>Lead generation</li><li>Business process automation</li></ul>',
+      '<p>We connect you with the buyers, suppliers, distributors and partners that fit your products and goals — and support you from first introduction all the way to agreement.</p>' +
+      '<section class="svc-group"><h3>Buyer-supplier connections</h3><p>Connecting clients with buyers or suppliers that match their products, volumes and standards.</p></section>' +
+      '<section class="svc-group"><h3>Distributor identification</h3><p>Identifying and shortlisting distributors or agents in the target market.</p></section>' +
+      '<section class="svc-group"><h3>B2B introductions</h3><p>Arranging introductions and meetings between the client and relevant businesses.</p></section>' +
+      '<section class="svc-group"><h3>Partnership development</h3><p>Supporting clients in building partnerships, from first contact to agreement.</p></section>',
     body_fr:
-      '<p>ALA AI met une équipe d’employés IA au service de votre entreprise — toujours disponibles, toujours cohérents — pour automatiser la vente, le service client, les RH et les tâches administratives, afin que vos équipes se concentrent sur l’essentiel.</p><h3>Nos services</h3><ul><li>Assistant de direction IA</li><li>Commercial IA</li><li>Service client IA</li><li>Assistant WhatsApp IA</li><li>Assistant RH IA</li><li>Assistant juridique IA</li><li>Assistant marketing IA</li><li>Automatisation du CRM</li><li>Génération de prospects</li><li>Automatisation des processus métier</li></ul>',
+      '<p>Nous vous mettons en relation avec les acheteurs, fournisseurs, distributeurs et partenaires adaptés à vos produits et à vos objectifs — et nous vous accompagnons de la première introduction jusqu’à l’accord.</p>' +
+      '<section class="svc-group"><h3>Mise en relation acheteurs-fournisseurs</h3><p>Mettre les clients en relation avec des acheteurs ou des fournisseurs correspondant à leurs produits, volumes et normes.</p></section>' +
+      '<section class="svc-group"><h3>Identification de distributeurs</h3><p>Identifier et présélectionner des distributeurs ou des agents sur le marché cible.</p></section>' +
+      '<section class="svc-group"><h3>Introductions B2B</h3><p>Organiser des introductions et des rencontres entre le client et les entreprises pertinentes.</p></section>' +
+      '<section class="svc-group"><h3>Développement de partenariats</h3><p>Accompagner les clients dans la construction de partenariats, du premier contact à l’accord.</p></section>',
     sort_order: 2,
     is_published: true,
   },
   {
-    slug: 'ala-academy',
+    slug: 'visa-global-mobility',
+    icon_name: 'plane',
+    title_en: 'Visa & Global Mobility Services',
+    title_fr: 'Visa et mobilité internationale',
+    cover_image_url: media('2025/04/visa-assistance-service.jpg'),
+    excerpt_en:
+      'Visa application administrative support, business travel coordination, relocation logistics and mobility orientation for professionals moving across borders.',
+    excerpt_fr:
+      'Appui administratif aux demandes de visa, coordination des voyages d’affaires, logistique de relocation et orientation à la mobilité pour les professionnels qui franchissent les frontières.',
+    body_en:
+      '<p>We handle the practical side of moving people across borders — from organising visa documents to arranging travel and settling in — so professionals, teams and families can focus on the purpose of the move.</p>' +
+      '<section class="svc-group"><h3>Visa application administrative support</h3><p>Helping applicants prepare and organise visa documents and get ready for interviews. Visa decisions rest solely with the relevant embassy.</p></section>' +
+      '<section class="svc-group"><h3>Business travel coordination</h3><p>Organising the practical arrangements for business trips.</p></section>' +
+      '<section class="svc-group"><h3>Relocation logistics</h3><p>Practical support for people relocating for work.</p></section>' +
+      '<section class="svc-group"><h3>Mobility orientation</h3><p>Briefings to help travellers and new arrivals understand how life and business work in their destination.</p></section>',
+    body_fr:
+      '<p>Nous gérons le côté pratique du déplacement des personnes au-delà des frontières — de l’organisation des documents de visa aux arrangements de voyage et à l’installation — afin que professionnels, équipes et familles puissent se concentrer sur l’objet de leur déplacement.</p>' +
+      '<section class="svc-group"><h3>Appui administratif aux demandes de visa</h3><p>Aider les demandeurs à préparer et organiser leurs documents de visa et à se préparer aux entretiens. Les décisions de visa relèvent exclusivement de l’ambassade concernée.</p></section>' +
+      '<section class="svc-group"><h3>Coordination des voyages d’affaires</h3><p>Organiser les aspects pratiques des déplacements professionnels.</p></section>' +
+      '<section class="svc-group"><h3>Logistique de relocation</h3><p>Un appui concret pour les personnes qui se relocalisent pour le travail.</p></section>' +
+      '<section class="svc-group"><h3>Orientation à la mobilité</h3><p>Des briefings pour aider voyageurs et nouveaux arrivants à comprendre la vie et les affaires dans leur destination.</p></section>',
+    sort_order: 3,
+    is_published: true,
+  },
+  {
+    slug: 'investment-diaspora-facilitation',
+    icon_name: 'piggy-bank',
+    title_en: 'Investment & Diaspora Facilitation',
+    title_fr: 'Investissement et facilitation diaspora',
+    cover_image_url: media(
+      '2025/04/financial-analyst-analyzes-business-people-investment-consultant-analyzing-company-financial-report-1.jpg',
+    ),
+    excerpt_en:
+      'Investment opportunity identification, diaspora business engagement and investor introductions — connecting capital with the right projects and partners.',
+    excerpt_fr:
+      'Identification d’opportunités d’investissement, mobilisation de la diaspora et mises en relation avec des investisseurs — pour connecter les capitaux aux bons projets et partenaires.',
+    body_en:
+      '<p>We connect investors, the diaspora and project owners — identifying opportunities that fit, engaging the African diaspora, and making the introductions that turn interest into investment.</p>' +
+      '<section class="svc-group"><h3>Investment opportunity identification</h3><p>Identifying investment opportunities that match an investor’s interests and profile.</p></section>' +
+      '<section class="svc-group"><h3>Diaspora business engagement</h3><p>Engaging the African diaspora in business and investment opportunities at home.</p></section>' +
+      '<section class="svc-group"><h3>Investor introductions</h3><p>Introducing investors to project owners, partners and opportunities.</p></section>',
+    body_fr:
+      '<p>Nous connectons investisseurs, diaspora et porteurs de projets — en identifiant les opportunités adaptées, en mobilisant la diaspora africaine et en réalisant les introductions qui transforment l’intérêt en investissement.</p>' +
+      '<section class="svc-group"><h3>Identification d’opportunités d’investissement</h3><p>Identifier des opportunités d’investissement correspondant aux intérêts et au profil d’un investisseur.</p></section>' +
+      '<section class="svc-group"><h3>Mobilisation de la diaspora</h3><p>Impliquer la diaspora africaine dans les opportunités d’affaires et d’investissement dans son pays d’origine.</p></section>' +
+      '<section class="svc-group"><h3>Mises en relation avec des investisseurs</h3><p>Présenter des investisseurs à des porteurs de projets, des partenaires et des opportunités.</p></section>',
+    sort_order: 4,
+    is_published: true,
+  },
+  {
+    slug: 'trade-training-capacity-building',
     icon_name: 'graduation-cap',
-    title_en: 'ALA Academy',
-    title_fr: 'ALA Academy',
+    title_en: 'Trade Training & Capacity Building',
+    title_fr: 'Formation commerciale et renforcement des capacités',
     cover_image_url: media(
       '2025/04/mature-business-coach-or-speaker-make-flip-chart-presentation-to-diverse-businesspeople-at-meeting.jpg',
     ),
     excerpt_en:
-      'Corporate training and capacity building — from export readiness and international trade to AI for business, leadership, and executive masterclasses.',
+      'The Africa Trade Accelerator, export-readiness workshops and international business training — practical, expert-led capacity building to help you compete internationally.',
     excerpt_fr:
-      'Formation professionnelle et renforcement des capacités — de la préparation à l’export et du commerce international à l’IA pour les entreprises, au leadership et aux masterclasses pour dirigeants.',
+      'L’Africa Trade Accelerator, des ateliers de préparation à l’export et des formations au commerce international — un renforcement des capacités concret, animé par des experts, pour être compétitif à l’international.',
     body_en:
-      '<p>ALA Academy builds the skills your teams need to compete internationally — practical, expert-led training and capacity building across trade, technology, and leadership, delivered as workshops, masterclasses, and corporate programs.</p><h3>Our programs</h3><ul><li>Export Readiness</li><li>International Trade</li><li>Import Management</li><li>AI for Business</li><li>Digital Transformation</li><li>Procurement</li><li>Leadership Development</li><li>Cross-cultural Business</li><li>Business English</li><li>Sales &amp; Negotiation</li><li>Corporate workshops</li><li>Executive masterclasses</li></ul>',
+      '<p>We build the skills African businesses need to compete abroad — through our flagship Africa Trade Accelerator, hands-on export-readiness workshops, and practical international business training.</p>' +
+      '<section class="svc-group"><h3>Africa Trade Accelerator</h3><p>ALA’s flagship initiative preparing African businesses to compete in international markets, particularly the United States.</p></section>' +
+      '<section class="svc-group"><h3>Export-readiness workshops</h3><p>Practical workshops on what businesses need to export successfully.</p></section>' +
+      '<section class="svc-group"><h3>International business training</h3><p>Training on international trade and doing business across borders.</p></section>',
     body_fr:
-      '<p>ALA Academy développe les compétences dont vos équipes ont besoin pour être compétitives à l’international — des formations pratiques animées par des experts et un renforcement des capacités en commerce, technologie et leadership, sous forme d’ateliers, de masterclasses et de programmes en entreprise.</p><h3>Nos programmes</h3><ul><li>Préparation à l’export</li><li>Commerce international</li><li>Gestion des importations</li><li>L’IA pour les entreprises</li><li>Transformation digitale</li><li>Achats</li><li>Développement du leadership</li><li>Affaires interculturelles</li><li>Anglais des affaires</li><li>Vente et négociation</li><li>Ateliers en entreprise</li><li>Masterclasses pour dirigeants</li></ul>',
-    sort_order: 3,
+      '<p>Nous développons les compétences dont les entreprises africaines ont besoin pour être compétitives à l’étranger — à travers notre initiative phare, l’Africa Trade Accelerator, des ateliers pratiques de préparation à l’export et des formations concrètes au commerce international.</p>' +
+      '<section class="svc-group"><h3>Africa Trade Accelerator</h3><p>L’initiative phare d’ALA qui prépare les entreprises africaines à être compétitives sur les marchés internationaux, en particulier aux États-Unis.</p></section>' +
+      '<section class="svc-group"><h3>Ateliers de préparation à l’export</h3><p>Des ateliers pratiques sur ce dont les entreprises ont besoin pour exporter avec succès.</p></section>' +
+      '<section class="svc-group"><h3>Formation au commerce international</h3><p>Des formations sur le commerce international et les affaires transfrontalières.</p></section>',
+    sort_order: 5,
     is_published: true,
   },
 ];
