@@ -8,7 +8,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-ala-red text-white hover:bg-ala-red-dark shadow-soft',
+        primary: 'bg-ala-cta text-white hover:bg-ala-cta-dark shadow-soft',
         navy: 'bg-ala-navy text-white hover:bg-ala-navy-soft',
         outline: 'border-2 border-white text-white hover:bg-white hover:text-ala-navy',
         'outline-navy': 'border-2 border-ala-navy text-ala-navy hover:bg-ala-navy hover:text-white',

@@ -17,6 +17,9 @@ export default {
           red: '#C8102E',
           'red-dark': '#9B0C23',
           gold: '#C9A227',
+          // Warm gold/amber CTA color matching alachoice.com buttons.
+          cta: '#F17300',
+          'cta-dark': '#D96800',
           white: '#FFFFFF',
           'grey-50': '#F4F6F9',
           'grey-200': '#E2E8F0',
