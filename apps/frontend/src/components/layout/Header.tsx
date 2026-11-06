@@ -38,7 +38,6 @@ export function Header() {
     { to: '/about', label: t('nav.about') },
     { to: '/services', label: t('nav.services'), hasDropdown: true },
     { to: '/ata', label: t('nav.ata') },
-    { to: '/countries', label: t('nav.countries') },
     { to: '/events', label: t('nav.events') },
     { to: '/news', label: t('nav.news') },
     { to: '/contact', label: t('nav.contact') },

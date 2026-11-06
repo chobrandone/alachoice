@@ -68,7 +68,7 @@ export function InquiryForm({ variant = 'light' }: { variant?: 'light' | 'onGrey
         </Field>
         <Field label={t('forms.service')}>
           <select className={cn(inputCls, 'appearance-none')} {...register('service_id')} defaultValue="">
-            <option value="">{t('forms.selectService')}</option>
+            <option value="">{t('forms.generalInquiry')}</option>
             {(services ?? []).map((s) => (
               <option key={s.id} value={s.id}>
                 {localized(s, 'title')}

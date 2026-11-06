@@ -278,10 +278,10 @@ export const methodologyPillars = [
 
 // Live site shows 0 for all; these are sensible editable defaults.
 export const statistics = [
-  { label_en: 'Businesses Trust Us', label_fr: 'Entreprises nous font confiance', value: 200, suffix: '+', sort_order: 0 },
-  { label_en: 'Projects Done', label_fr: 'Projets réalisés', value: 350, suffix: '+', sort_order: 1 },
+  { label_en: 'Businesses Served', label_fr: 'Entreprises accompagnées', value: 18, suffix: '+', sort_order: 0 },
+  { label_en: 'Projects Completed', label_fr: 'Projets réalisés', value: 14, suffix: '+', sort_order: 1 },
   { label_en: 'Success Rate', label_fr: 'Taux de réussite', value: 98, suffix: '%', sort_order: 2 },
-  { label_en: 'Years of Experience', label_fr: 'Ans d’expérience', value: 15, suffix: '+', sort_order: 3 },
+  { label_en: 'Years combined team expertise', label_fr: 'Ans d’expertise cumulée', value: 20, suffix: '+', sort_order: 3 },
 ];
 
 export const faqs = [
@@ -335,7 +335,7 @@ export const teamMembers = [
 
 export const timelineEntries = [
   {
-    year: '2009',
+    year: '2024',
     title_en: 'Founded',
     title_fr: 'Création',
     description_en: 'American Liaison in Africa is established to bridge Cameroon and the United States.',
@@ -343,7 +343,7 @@ export const timelineEntries = [
     sort_order: 0,
   },
   {
-    year: '2015',
+    year: '2025',
     title_en: 'Regional Expansion',
     title_fr: 'Expansion régionale',
     description_en: 'Services broaden across trade, investment, and event management for pan-African clients.',

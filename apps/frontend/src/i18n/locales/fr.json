@@ -43,6 +43,7 @@
     "country": "Pays",
     "service": "Service",
     "selectService": "Choisir un service",
+    "generalInquiry": "Demande générale",
     "message": "Message",
     "budget": "Budget estimé",
     "details": "Détails du projet",

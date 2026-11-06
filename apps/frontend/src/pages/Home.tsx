@@ -64,8 +64,8 @@ export default function Home() {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 rounded-card bg-ala-navy px-6 py-5 text-white shadow-soft-lg">
-                <p className="font-heading text-3xl font-bold text-ala-gold">15+</p>
-                <p className="text-sm text-white/80">Years of Experience</p>
+                <p className="font-heading text-3xl font-bold text-ala-gold">98%</p>
+                <p className="text-sm text-white/80">Client success rate</p>
               </div>
             </div>
           </Reveal>

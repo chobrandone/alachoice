@@ -53,6 +53,9 @@ export const newsCategory = z.enum([
   'announcements',
   'event_news',
   'success_stories',
+  'trade_news',
+  'market_access',
+  'investment',
 ]);
 export type NewsCategory = z.infer<typeof newsCategory>;
 
@@ -66,6 +69,9 @@ export const NEWS_CATEGORY_LABELS: Record<NewsCategory, string> = {
   announcements: 'ALA Announcements',
   event_news: 'Event News',
   success_stories: 'Success Stories',
+  trade_news: 'Trade & Market News',
+  market_access: 'Market Access',
+  investment: 'Investment',
 };
 
 export const newsArticle = timestamped.extend({

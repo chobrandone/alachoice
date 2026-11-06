@@ -24,11 +24,11 @@ export default function News() {
 
   return (
     <>
-      <Seo title="News & Updates" description="Immigration news, visa updates, scholarship opportunities, and announcements from ALA." />
+      <Seo title="News & Insights" description="Trade, market access and investment news, plus updates from the ALA team." />
       <PageHero
-        eyebrow="News & Updates"
-        title="The latest on immigration, study & opportunity"
-        intro="Visa changes, scholarship intakes, and announcements — curated by the ALA team."
+        eyebrow="News & Insights"
+        title="Trade, markets & investment insights"
+        intro="U.S.–Africa trade news, market-access updates, and announcements — curated by the ALA team."
       />
       <Section tone="grey">
         <Container>
