@@ -12,8 +12,6 @@ const B2BPlatform = lazy(() => import('@/pages/B2BPlatform'));
 const Events = lazy(() => import('@/pages/Events'));
 const EventDetail = lazy(() => import('@/pages/EventDetail'));
 const Gallery = lazy(() => import('@/pages/Gallery'));
-const Countries = lazy(() => import('@/pages/Countries'));
-const CountryDetail = lazy(() => import('@/pages/CountryDetail'));
 const News = lazy(() => import('@/pages/News'));
 const NewsDetail = lazy(() => import('@/pages/NewsDetail'));
 const Testimonials = lazy(() => import('@/pages/Testimonials'));
@@ -50,8 +48,6 @@ export default function App() {
           <Route path="events" element={<Events />} />
           <Route path="events/:slug" element={<EventDetail />} />
           <Route path="gallery" element={<Gallery />} />
-          <Route path="countries" element={<Countries />} />
-          <Route path="countries/:slug" element={<CountryDetail />} />
           <Route path="news" element={<News />} />
           <Route path="news/:slug" element={<NewsDetail />} />
           <Route path="testimonials" element={<Testimonials />} />

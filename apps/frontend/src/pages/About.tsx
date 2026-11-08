@@ -3,9 +3,7 @@ import { Container, Section, SectionHeading } from '@/components/ui/primitives';
 import { Reveal } from '@/components/ui/Reveal';
 import { CountUp } from '@/components/ui/CountUp';
 import { PageHero } from '@/components/content/PageHero';
-import { Skeleton } from '@/components/ui/Skeleton';
-import { TeamCard } from '@/components/content/TeamCard';
-import { useTeam, useTimeline, useStatistics, usePage, useSiteSettings, usePartners } from '@/lib/queries';
+import { useTimeline, useStatistics, usePage, useSiteSettings, usePartners } from '@/lib/queries';
 import { useLocalized } from '@/lib/i18nField';
 import aboutAfrica from '@/assets/about-africa.jpg';
 import usAfrica from '@/assets/us-africa.webp';
@@ -13,7 +11,6 @@ import usAfrica from '@/assets/us-africa.webp';
 export default function About() {
   const localized = useLocalized();
   const { data: page } = usePage('about');
-  const { data: team, isLoading: teamLoading } = useTeam();
   const { data: timeline } = useTimeline();
   const { data: stats } = useStatistics();
   const { data: settings } = useSiteSettings();
@@ -102,15 +99,25 @@ export default function About() {
         </Section>
       )}
 
-      {/* Team */}
+      {/* Message from the Founders */}
       <Section>
-        <Container>
-          <SectionHeading align="center" eyebrow="Leadership" title="The people behind ALA" />
-          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {teamLoading
-              ? Array.from({ length: 3 }).map((_, i) => <Skeleton key={i} className="h-80 rounded-card" />)
-              : (team ?? []).map((m) => <TeamCard key={m.id} member={m} />)}
-          </div>
+        <Container className="max-w-3xl text-center">
+          <SectionHeading align="center" eyebrow="Our leadership" title="A message from the founders" />
+          <blockquote className="mt-8 text-lg leading-relaxed text-ala-grey-500">
+            <p>
+              “We founded American Liaison in Africa to open real doors between African businesses and
+              the world — not with promises, but with practical, hands-on work: getting companies
+              export-ready, making the right introductions, and standing beside them from the first
+              meeting to the signed deal.
+            </p>
+            <p className="mt-4">
+              Our focus is on results and relationships, not on putting ourselves in the spotlight. If
+              you are ready to trade, invest, or expand across borders, we are ready to work.”
+            </p>
+          </blockquote>
+          <p className="mt-8 font-heading text-base font-semibold text-ala-navy">
+            — The Founders, American Liaison in Africa
+          </p>
         </Container>
       </Section>
 
