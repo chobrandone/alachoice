@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/primitives';
 import { Socials } from './Socials';
 import { NewsletterForm } from '@/components/forms/NewsletterForm';
 import { useSiteSettings } from '@/lib/queries';
+import alaLogo from '@/assets/ala-Logo.jpg';
 
 export function Footer() {
   const { t, i18n } = useTranslation();
@@ -28,8 +29,12 @@ export function Footer() {
       <Container className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
         <div>
-          <Link to="/" className="font-heading text-2xl font-bold text-white">
-            ALA<span className="text-ala-cta">.</span>
+          <Link to="/" className="inline-flex" aria-label="American Liaison in Africa — home">
+            <img
+              src={alaLogo}
+              alt="American Liaison in Africa"
+              className="h-12 w-auto rounded-md bg-white p-1.5"
+            />
           </Link>
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
             {(settings?.brand?.blurb as string) ??
