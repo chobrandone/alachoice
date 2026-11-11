@@ -17,7 +17,8 @@
  * (bucket `media`, path prefix `alachoice/<year>/<month>/<file>`). Helper builds
  * the public URL; swap the base if the project ref ever changes.
  */
-const MEDIA_BASE = 'https://alachoice.com/wp-content/uploads/';
+const MEDIA_BASE =
+  'https://bihhaxezlkgusionmlwm.supabase.co/storage/v1/object/public/media/alachoice/';
 const media = (p: string) => MEDIA_BASE + p;
 
 export const siteSettings: { key: string; value_json: Record<string, unknown> }[] = [
