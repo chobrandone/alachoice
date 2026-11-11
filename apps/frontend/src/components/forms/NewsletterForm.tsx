@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { useTranslation } from 'react-i18next';
 import { Check } from 'lucide-react';
 import { useSubscribeNewsletter } from '@/lib/mutations';
+import { useRecaptcha } from '@/lib/recaptcha';
 
 const schema = z.object({
   name: z.string().optional(),
@@ -22,10 +23,13 @@ export function NewsletterForm() {
     resolver: zodResolver(schema),
   });
   const mutation = useSubscribeNewsletter();
+  const getRecaptchaToken = useRecaptcha();
 
   // Only email is persisted for now; the name improves the sign-up experience.
-  const onSubmit = (values: Values) =>
-    mutation.mutate({ email: values.email }, { onSuccess: () => reset() });
+  const onSubmit = async (values: Values) => {
+    const recaptcha_token = await getRecaptchaToken('newsletter');
+    mutation.mutate({ email: values.email, recaptcha_token }, { onSuccess: () => reset() });
+  };
 
   if (mutation.isSuccess) {
     return (

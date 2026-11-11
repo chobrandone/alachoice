@@ -19,6 +19,9 @@ const schema = z.object({
   MAIL_FROM: z.string().default('ALA Website <no-reply@alachoice.com>'),
   MAIL_NOTIFY_TO: z.string().default('contacts@alachoice.com'),
 
+  // Google reCAPTCHA v3 (optional — verification is skipped until the secret is set).
+  RECAPTCHA_SECRET: z.string().optional(),
+
   // WhatsApp Cloud API (optional — messaging no-ops with a log until configured).
   WHATSAPP_TOKEN: z.string().optional(),
   WHATSAPP_PHONE_ID: z.string().optional(),

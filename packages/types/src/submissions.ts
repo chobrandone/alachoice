@@ -23,6 +23,7 @@ export const inquiryInput = z.object({
   message: z.string().trim().min(1).max(5000),
   source: z.string().max(60).optional(),
   company: z.string().max(0).optional(), // honeypot: bots fill it, humans don't
+  recaptcha_token: z.string().optional(), // Google reCAPTCHA v3 token
 });
 
 export const inquiryStatusUpdate = z.object({ status: submissionStatus });
@@ -39,6 +40,7 @@ export const newsletterSubscriber = baseRow.extend({
 export const newsletterInput = z.object({
   email: z.string().trim().email().max(240),
   company: z.string().max(0).optional(), // honeypot
+  recaptcha_token: z.string().optional(),
 });
 export type NewsletterSubscriber = z.infer<typeof newsletterSubscriber>;
 export type NewsletterInput = z.infer<typeof newsletterInput>;
@@ -63,6 +65,7 @@ export const quoteRequestInput = z.object({
   budget_range: z.string().trim().max(80).optional(),
   details: z.string().trim().max(5000).optional(),
   company: z.string().max(0).optional(), // honeypot
+  recaptcha_token: z.string().optional(),
 });
 export const quoteStatusUpdate = z.object({ status: submissionStatus });
 export type QuoteRequest = z.infer<typeof quoteRequest>;

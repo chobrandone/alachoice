@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button';
 import { useServices } from '@/lib/queries';
 import { useLocalized } from '@/lib/i18nField';
 import { useSubmitInquiry } from '@/lib/mutations';
+import { useRecaptcha } from '@/lib/recaptcha';
 import { cn } from '@/lib/cn';
 
 const inputCls =
@@ -17,6 +18,7 @@ export function InquiryForm({ variant = 'light' }: { variant?: 'light' | 'onGrey
   const localized = useLocalized();
   const { data: services } = useServices();
   const mutation = useSubmitInquiry();
+  const getRecaptchaToken = useRecaptcha();
 
   const schema = z.object({
     name: z.string().min(1, t('forms.required')),
@@ -33,8 +35,9 @@ export function InquiryForm({ variant = 'light' }: { variant?: 'light' | 'onGrey
   });
   const errors = formState.errors;
 
-  const onSubmit = (values: Values) => {
-    const payload = { ...values, service_id: values.service_id || undefined };
+  const onSubmit = async (values: Values) => {
+    const recaptcha_token = await getRecaptchaToken('inquiry');
+    const payload = { ...values, service_id: values.service_id || undefined, recaptcha_token };
     mutation.mutate(payload, { onSuccess: () => reset() });
   };
 
