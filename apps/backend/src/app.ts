@@ -16,9 +16,13 @@ export function createApp() {
   app.use(
     cors({
       origin(origin, cb) {
-        // allow same-origin / server-to-server (no Origin header) and whitelisted origins
+        // Allow server-to-server (no Origin header) and whitelisted origins.
         if (!origin || corsOrigins.includes(origin)) return cb(null, true);
-        return cb(new Error(`Origin ${origin} not allowed by CORS`));
+        // Disallowed cross-origin: deny CORS headers rather than throwing (a
+        // thrown error becomes a 500). Same-origin requests (the SPA calling
+        // its own /api) still succeed regardless of the host; the browser
+        // blocks genuine cross-origin requests on its own.
+        return cb(null, false);
       },
       credentials: true,
     }),
